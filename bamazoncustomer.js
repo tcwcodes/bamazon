@@ -47,6 +47,7 @@ function ask() {
             console.log("Units asked: " + units_asked);
             if (units_asked > units_inv) {
                 console.log("Insufficient quanity! Choose " + units_inv + " or less.")
+                connection.end();
             } else {
                 var units_left = units_inv - units_asked
                 var total = units_asked * price;
